@@ -1,0 +1,67 @@
+{
+  "DST_DIR": "docs/zxy",
+  "SITE_ROOT": "https://optgeo.github.io/10b512-7-113-50",
+  "SRC_DIR": "../10b256/docs/zxy",
+  "TMP_DIR": "../ramdisk",
+  "center": [
+    139.74659,
+    35.63518
+  ],
+  "layers": [
+    {
+      "id": "sky",
+      "paint": {
+        "sky-type": "atmosphere"
+      },
+      "type": "sky"
+    },
+    {
+      "id": "background",
+      "paint": {
+        "background-color": [
+          "rgb",
+          194,
+          209,
+          251
+        ]
+      },
+      "type": "background"
+    },
+    {
+      "id": "i",
+      "minzoom": 3,
+      "source": "basemap",
+      "type": "raster"
+    }
+  ],
+  "sources": {
+    "h": {
+      "maxzoom": 13,
+      "minzoom": 3,
+      "tileSize": 512,
+      "tiles": [
+        "https://optgeo.github.io/10b512-7-113-50/zxy/{z}/{x}/{y}.webp"
+      ],
+      "type": "raster-dem"
+    },
+    "basemap": {
+      "attribution": "Mapbox Satellite",
+      "type": "raster",
+      "tileSize": 256,
+      "url": "mapbox://mapbox.satellite"
+    },
+    "v": {
+      "attribution": "<a title='測量法に基づく国土地理院長承認(使用)R 2JHs 1065'>R 2JHs 1065</a>",
+      "maxzoom": 16,
+      "tiles": [
+        "https://optgeo.github.io/fgd-tokio/zxy/{z}/{x}/{y}.pbf"
+      ],
+      "type": "vector"
+    }
+  },
+  "terrain": {
+    "source": "h"
+  },
+  "version": 8,
+  "zoom": 11
+}
